@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Campuzon - Web Design Master Class</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-color="rgb(27, 27, 27)">
+          <section data-transition="zoom">
+            <img src="assets/campuzon_logo.png" alt="campuzon" />
+          </section>
+          <section data-transition="fade" data-transition-speed="slow">
+            <img src="assets/poster.jfif" alt="poster" width="700px" height="700px" />
+          </section>
+          <section data-transition="fade" data-background-color="#1B212C">
+            <img src="assets/intro_logos.png" alt="tech_logos" />
+            <p>Nijin Nazar & Aswin Asok</p>
+          </section>
+        </section>
+        <section data-transition="zoom">
+          <h6>Who am I ?</h6>
+          <img src="assets/nijin_profile.jfif" alt="nijin_profile" width="250" height="250" style="border-radius: 25px" />
+          <p style="font-size: 22px">MERN Stack Web Developer</p>
+          <p style="font-size: 22px; background-color: black">Front-End Developer @ Campuzon</p>
+          <p style="font-size: 22px">L-2 Software Developer Intern @ CuriousJr, Delhi</p>
+          <a href="https://www.linkedin.com/in/nijinnazar" target="_blank" style="font-size: 18px">Ping me on Linkedin</a>
+        </section>
+        <section data-background-color="#1B212C" data-transition="zoom">
+          <h1>Frontend</h1>
+          <p>The part of a website that the user interacts with directly is termed the front end. It is also referred to as the ‘client side’ of the application.</p>
+          <img src="assets/frontend.png" alt="frontend" />
+        </section>
+        <section data-background-color="#1B212C" data-transition="zoom">
+          <h1>Backend</h1>
+          <ul>
+            <li>Backend is the server-side of the website.</li>
+            <li>It is the part of the website that you cannot see and interact with.</li>
+          </ul>
+          <img src="assets/backend.png" alt="backend" />
+        </section>
+        <section data-transition="zoom">
+          <h1>Fullstack</h1>
+          <img src="assets/fullstack.jpg" alt="fullstack" />
+        </section>
+        <section data-transition="fade">
+          <h4>API (Application Programming Interface)</h4>
+          <img src="assets/api.png" alt="api" width="800" height="400" />
+          <ul style="font-size: 20px">
+            <li>An application programming interface is a connection between computer programs.</li>
+            <li>It is a type of software interface, offering a service to other pieces of software.</li>
+          </ul>
+        </section>
+        <section data-transition="fade" data-background-image="assets/api_2.gif"></section>
+        <section data-transition="fade" data-background-image="assets/library_framework.gif"></section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        autoAnimateEasing: "ease-out",
+        autoAnimateDuration: 0.8,
+        autoAnimateUnmatched: false,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
