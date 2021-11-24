@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Campuzon - Web Design Master Class</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/sky.css" />
+    <link rel="stylesheet" href="dist/custom.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>CSS (Cascading Style Sheets)</h4>
+          <ul>
+            <li>Selectors</li>
+            <li>CSS Box Model</li>
+            <li>Specificity</li>
+            <li>Color</li>
+            <li>Font</li>
+            <li>Background</li>
+            <li>Layout</li>
+            <li>Flexbox</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+          <img src="assets/css_1.gif" alt="css_1">
+          </section>
+            <section>
+          <img src="assets/css.png" alt="css">
+        </section>
+        </section>
+      
+        <section>
+          <section>
+            <ul>
+            <li>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.</li>
+            <li>CSS describes the visual style and presentation of the content written in HTML.</li>
+          </ul>
+          </section>
+          <section>
+             <h2>A css rule has the following syntax:</h2>
+          </section>
+          <section>
+              <pre><code data-trim data-noescape>
+                      Selector { 	
+                        property : value; 
+                      }
+                      </code></pre>
+          </section>
+          <section>
+             <h2>A CSS rule can be written in three ways.</h2>
+          </section>
+             <section>
+            <ul>
+              <li> <b>INLINE CSS: </b> Written inside the html element as style={property:value} attribute.</li>
+              <li> <b>INTERNAL CSS: </b>  Written inside &lt;style&gt; element in the &lt;head&gt; </li>
+              <li> <b>EXTERNAL CSS: </b> Written as a separate .css file and linked with html file using the &lt;link&gt; element in the &lt;head&gt;</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        autoAnimateEasing: "ease-out",
+        autoAnimateDuration: 0.8,
+        autoAnimateUnmatched: false,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
