@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/sky.css" />
+    <link rel="stylesheet" href="dist/theme/beige.css" />
     <link rel="stylesheet" href="dist/custom.css" />
 
     <!-- Theme used for syntax highlighted code -->
@@ -18,53 +18,238 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h2>CSS (Cascading Style Sheets)</h4>
+          <h2>CSS (Cascading Style Sheets)</h2>
           <ul>
             <li>Selectors</li>
             <li>CSS Box Model</li>
-            <li>Specificity</li>
-            <li>Color</li>
-            <li>Font</li>
-            <li>Background</li>
-            <li>Layout</li>
-            <li>Flexbox</li>
+            <li>Positioning</li>
+            <li>
+              Layout
+              <ul>
+                <li>Flexbox</li>
+              </ul>
+            </li>
           </ul>
         </section>
         <section>
           <section>
-          <img src="assets/css_1.gif" alt="css_1">
+            <img src="assets/css_1.gif" alt="css_1" />
           </section>
-            <section>
-          <img src="assets/css.png" alt="css">
+          <section>
+            <img src="assets/css.png" alt="css" />
+          </section>
         </section>
-        </section>
-      
+
         <section>
           <section>
             <ul>
-            <li>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.</li>
-            <li>CSS describes the visual style and presentation of the content written in HTML.</li>
-          </ul>
+              <li>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.</li>
+              <li>CSS describes the visual style and presentation of the content written in HTML.</li>
+            </ul>
           </section>
           <section>
-             <h2>A css rule has the following syntax:</h2>
+            <h2>A css rule has the following syntax:</h2>
           </section>
-          <section>
-              <pre><code data-trim data-noescape>
+          <section data-auto-animate>
+            <pre><code data-trim data-noescape>
                       Selector { 	
                         property : value; 
                       }
                       </code></pre>
           </section>
           <section>
-             <h2>A CSS rule can be written in three ways.</h2>
+            <h2>A CSS rule can be written in three ways.</h2>
           </section>
-             <section>
+          <section>
             <ul>
-              <li> <b>INLINE CSS: </b> Written inside the html element as style={property:value} attribute.</li>
-              <li> <b>INTERNAL CSS: </b>  Written inside &lt;style&gt; element in the &lt;head&gt; </li>
-              <li> <b>EXTERNAL CSS: </b> Written as a separate .css file and linked with html file using the &lt;link&gt; element in the &lt;head&gt;</li>
+              <li><b>INLINE CSS: </b> Written inside the html element as style={property:value} attribute.</li>
+              <li><b>INTERNAL CSS: </b> Written inside &lt;style&gt; element in the &lt;head&gt;</li>
+              <li><b>EXTERNAL CSS: </b> Written as a separate .css file and linked with html file using the &lt;link&gt; element in the &lt;head&gt;</li>
             </ul>
+          </section>
+          <section>
+            <h3><b>Overriding Priority:</b></h3>
+            <p>INLINE > INTERNAL > EXTERNAL</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>css selectors</h1>
+            <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+          </section>
+          <section>
+            <h5>Simple Selectors</h5>
+            <ul style="font-size: 32px">
+              <li><b>Element Selector (*element-name*)</b> selects HTML elements based on the element name.</li>
+              <li><b>Id Selector (#id)</b> uses the id attribute of an HTML element to select a specific element.</li>
+              <li><b>Class Selector (.class) </b>selects HTML elements with a specific class attribute.</li>
+              <li><b>Universal Selector (*)</b> selects all HTML elements on the page.</li>
+            </ul>
+          </section>
+          <section>
+            <h5>Combinator Selectors</h5>
+            <ul style="font-size: 32px">
+              <li><b>Descendant selector (space)</b> matches all elements that are descendants of a specified element, i.e. all elements under the parent element such as direct children, grand children etc.</li>
+              <li><b>Direct Child selector (>) </b> selects all elements that are the children of a specified element, i.e. only elements that are direct children.</li>
+              <li><b>Adjacent sibling selector (+)</b> is used to select an element that is directly after another specific element.</li>
+              <li><b>General sibling selector (~)</b>selects all elements that are next siblings of a specified element.</li>
+            </ul>
+          </section>
+          <section>
+            <h5>Pseudo Classes</h5>
+            <ul style="font-size: 32px">
+              <li>A pseudo-class is used to define a special state of an element.</li>
+              <li>Syntax of defining pseudo class is:</li>
+            </ul>
+            <pre><code data-trim data-noescape>
+                selector:pseudo-class {
+                    property: value;
+                }
+                      </code></pre>
+            <p>Example</p>
+            <pre><code data-trim data-noescape>
+                div {
+                  background-color: red;
+                }
+
+                div:hover {
+                    background-color: green;
+                }
+                      </code></pre>
+          </section>
+          <section>
+            <h2>Selector Priority</h2>
+            <p>Inline style > Id selector > Class/pseudo class selector > Element selector > Universal selector >"</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>CSS Box Model</h1>
+          </section>
+          <section>
+            <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.</p>
+            <img src="assets/box_model.png" alt="box_model" width="700px" height="400px" />
+          </section>
+          <section>
+            <img src="assets/block_level_vs_inline.png" alt="block_inline" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Positioning</h1>
+            <p>The position property can help you manipulate the location of an element.</p>
+          </section>
+          <section>
+            <h3>Static</h3>
+            <p>HTML elements are positioned static by default.</p>
+            <p>Static positioned elements are not affected by the top, bottom, left, and right properties.</p>
+            <p>An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+          </section>
+          <section>
+            <h3>Relative</h3>
+            <p>An element with position: relative; is positioned relative to its normal position.</p>
+            <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.</p>
+          </section>
+          <section>
+            <h3>Absolute</h3>
+            <p>The element is removed from the flow of the document and other elements will behave as if it’s not even there whilst all the other positional properties will work on it.</p>
+            <aside>💡 Note: For absolute positioning, parent container should be an element with `position: relative`</aside>
+            <a href="https://codepen.io/team/css-tricks/full/7291a601af02608d928b1232d6456ec9" target="_blank">Example</a>
+          </section>
+          <section>
+            <h3>Fixed</h3>
+            <p>
+              The element is removed from the flow of the document like absolutely positioned elements. In fact they behave almost the same, only fixed positioned elements are always relative to the document, not any particular parent, and are
+              unaffected by scrolling.
+            </p>
+            <a href="https://codepen.io/team/css-tricks/pen/e0e72fa57f387265fb7a3aa7a296d684" target="_blank">Example</a>
+          </section>
+          <section>
+            <h3>Sticky</h3>
+            <p>It allows you to make elements stick when the scroll reaches a certain point.</p>
+            <a href="https://codepen.io/geoffgraham/pen/ybVzeX" target="_blank">Example</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Layout</h1>
+            <p>Layout is the way text, images and other content is placed and arranged on a webpage.</p>
+          </section>
+          <section>
+            <ol>
+              <li><b>Float layouts:</b> The old way of building layouts of all sizes, using the float CSS property. Still used, but getting outdated fast.</li>
+              <li><b>Flexbox:</b> Modern way of laying out elements in a 1-dimensional row without using floats. Perfect for component layouts.</li>
+              <li><b>CSS Grid: </b>For laying out elements in a fully-fledged 2-dimensional grid. **Perfect for page layouts and complex components.**</li>
+            </ol>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Flexbox</h1>
+            <p>Flexbox is a set of related CSS properties for building 1-dimensional layouts.</p>
+          </section>
+          <section>
+            <p>The main idea behind flexbox is that empty spaces inside a container element can be automatically divided by its child elements.</p>
+            <p>Flexbox makes it easy to automatically align items to one another inside a parent container, both horizontally and vertically.</p>
+          </section>
+          <section>
+            <p>Flexbox is perfect for replacing floats, allowing us to write fewer and cleaner HTML and CSS code.</p>
+          </section>
+          <section>
+            <h3>How to make a Flexbox Cotainer ?</h3>
+            <pre><code>
+              // On Parent
+              display: flex;
+            </code></pre>
+            <img src="assets/flexbox_1.png" alt="flexbox_1" width="90%" height="60%" />
+          </section>
+          <section>
+            <h1>Flexbox Container Properties</h1>
+          </section>
+          <section>
+            <p>1. <b>flex-direction</b>: To define the direction of main-axis</p>
+            <img src="assets/flexbox_2.svg" alt="direction" width="90%" height="60%" />
+          </section>
+          <section>
+            <p>2. <b>justify-content</b>: To align items along main axis <i>(horizontally by default)</i></p>
+            <img src="assets/justify-content.svg" alt="justify" width="90%" height="500px" />
+          </section>
+          <section>
+            <p>3. <b>align-tems</b>: To align items along the cross axis <i>(vertical by default)</i></p>
+            <img src="assets/align-items.svg" alt="align" width="90%" height="500px" />
+          </section>
+          <section>
+            <p>4. <b>gap</b>: To create space between items, without using margin.</p>
+            <img src="assets/gap.svg" alt="align" width="90%" height="500px" />
+          </section>
+          <section>
+            <p>5. <b>flex-wrap</b>: To allow items to wrap into a new line if they are too large.</p>
+            <img src="assets/flex-wrap.svg" alt="align" width="90%" height="500px" />
+          </section>
+          <section>
+            <p>6. <b>align-content</b>: Only applies when there are multiple lines(flex-wrap: wrap).</p>
+            <img src="assets/align-content.svg" alt="align" width="90%" height="500px" />
+          </section>
+          <section>
+            <h1>Flex Items Properties</h1>
+          </section>
+          <section>
+            <p>1. <b>align-self</b>: To overwrite align-items for individual flex items.</p>
+            <img src="assets/align-self.svg" alt="align" width="90%" height="500px" />
+          </section>
+          <section>
+            <p>2. <b>flex-grow</b>: To allow a n element to grow(0 means no, 1+ means yes).</p>
+            <img src="assets/flex-grow.svg" alt="grow" width="90%" height="500px" />
+          </section>
+          <section>
+            <p>3. <b>flex-shrink</b>: To allow an element to shrink (0 means no, 1+ means yes)</p>
+            <img src="assets/23-flex-shrink.jpg" alt="shrink" width="90%" height="500px" />
+          </section>
+        </section>
+        <section data-transition="zoom">
+          <section>
+            <h1>Game Time</h1>
+            <a href="https://cutt.ly/flexbox" target="_blank">https://cutt.ly/flexbox</a>
           </section>
         </section>
       </div>
